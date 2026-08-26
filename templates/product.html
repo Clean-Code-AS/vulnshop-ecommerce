@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<div class="detail"><div class="bigemoji">{{p.image}}</div><div><small>{{p.category}}</small><h1>{{p.name}}</h1><p class="price">₹{{"%.0f"|format(p.price)}}</p><p>{{p.description}}</p><p>Stock: {{p.stock}}</p><a class="btn" href="/cart/add/{{p.id}}">Add to cart</a></div></div>{% endblock %}

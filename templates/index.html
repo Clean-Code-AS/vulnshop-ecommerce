@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}VulnShop — Home{% endblock %}{% block content %}
+<section class="hero"><div><span class="tag">CYBER MARKETPLACE</span><h1>Build. Buy.<br><span>Secure.</span></h1><p>A realistic e-commerce training application with an intentionally vulnerable security lab.</p><a class="btn" href="/products">Explore Products</a></div><div class="shield">🛡️</div></section>
+<div class="sectionhead"><h2>Featured Products</h2><a href="/products">View all →</a></div><main class="grid">{% for p in products[:4] %}<article class="card"><div class="emoji">{{p.image}}</div><small>{{p.category}}</small><h3>{{p.name}}</h3><p>{{p.description}}</p><b>₹{{"%.0f"|format(p.price)}}</b><a class="btn small" href="/product/{{p.id}}">View product</a></article>{% endfor %}</main>
+<section class="lab"><div><span class="tag red">TRAINING MODE</span><h2>Find the vulnerabilities.</h2><p>Explore SQL injection, reflected XSS and file inclusion-style flaws in an isolated local lab.</p></div><a class="btn danger" href="/vulnerabilities">Open Security Lab</a></section>
+{% endblock %}

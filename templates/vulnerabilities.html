@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}<div class="page"><span class="tag red">SECURITY LAB</span><h1>Intentional Vulnerabilities</h1><p>These flaws exist only for controlled local learning.</p><div class="vgrid">
+<div class="vuln"><span>01</span><h2>SQL Injection</h2><p>Product search concatenates user input into SQL.</p><code>/search?q=...</code><p class="fix">Fix: parameterized queries.</p></div>
+<div class="vuln"><span>02</span><h2>Reflected XSS</h2><p>Review preview reflects query parameters into HTML.</p><code>/review?name=...&comment=...</code><p class="fix">Fix: output encoding + safe templating.</p></div>
+<div class="vuln"><span>03</span><h2>File Inclusion Style</h2><p>A user-controlled filename selects a page from the lab directory.</p><code>/page?name=...</code><p class="fix">Fix: strict allowlist of page names.</p></div>
+</div><h2>Defensive challenge</h2><ol><li>Identify the unsafe data flow.</li><li>Reproduce it only against this local lab.</li><li>Patch the code.</li><li>Retest and document the fix.</li></ol></div>{% endblock %}
