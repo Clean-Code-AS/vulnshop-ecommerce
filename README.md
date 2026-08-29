@@ -15,7 +15,7 @@ python -m venv .venv
 pip install -r requirements.txt
 python app.py
 ```
-Open http://127.0.0.1:5000
+Open https://vulnshop-ecommerce-by-alok.onrender.com/
 
 Demo accounts:
 - Customer: student / labpass
